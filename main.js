@@ -161,3 +161,21 @@ const inventory = [
     sold: 8,
   },
 ];
+
+//* **Opdracht 1a:** Gebruik een array-methode om een array te maken met alle tv-type namen. Log de uitkomst in de console.
+// Opdracht 1a
+
+const typeTv_s = inventory.map ((inventor_y)=>{
+  return inventor_y.type +" "+ inventor_y.name;
+})
+ console.log(typeTv_s);
+
+//* **Opdracht 1b:** Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die volledig uitverkocht
+//   zijn. Log de uitkomst in de console.
+
+// Opdracht 1b
+
+const soldTv_s = inventory.filter ((inventor_y)=>{
+  return (inventor_y.originalStock - inventor_y.sold) === 0;
+})
+console.log(soldTv_s);
