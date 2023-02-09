@@ -179,3 +179,17 @@ const soldOutTvs = inventory.filter ((stockTv)=>{
   return (stockTv.originalStock - stockTv.sold) === 0;
 })
 console.log(soldOutTvs);
+
+//* **Opdracht 1c:** Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die over AmbiLight
+// beschikken. Log de uitkomst in de console.
+
+// Opdracht 1c
+
+const ambilightTvs = inventory.filter ((stockTv) => stockTv.options.ambiLight === true);
+console.log(ambilightTvs);
+
+//* **Opdracht 1d:** Schrijf een functie die alle tv's van laagste naar hoogste prijs sorteert. Log de uitkomst in de
+// console.
+
+inventory.sort((a, b) => a.price - b.price);
+console.log(inventory);
